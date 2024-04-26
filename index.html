@@ -2,11 +2,49 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ランダム文章表示</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f7f7;
+      font-family: Arial, sans-serif;
+    }
+    #container {
+      text-align: center;
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    #showTextBtn {
+      background-color: #ff6f61;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #showTextBtn:hover {
+      background-color: #ff4d3b;
+    }
+    #textDisplay {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-  <button id="showTextBtn">文章を表示</button>
-  <p id="textDisplay"></p>
+  <div id="container">
+    <button id="showTextBtn">文章を表示</button>
+    <p id="textDisplay"></p>
+  </div>
 
   <script>
     const texts = [
