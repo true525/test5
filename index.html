@@ -48,17 +48,10 @@
 
   <script>
     const texts = [
-  "文章1",
-  "文章2",
-  "文章3", 
-  "文章4",
-  "文章5",
-  "文章6",
-  "文章7", 
-  "文章8",
-  "文章9",
-  "文章10"
-];
+      "ここにあなたの文章1を入力してください。",
+      "ここにあなたの文章2を入力してください。",
+      "ここにあなたの文章3を入力してください。"
+    ];
 
     const textDisplay = document.getElementById("textDisplay");
     const showTextBtn = document.getElementById("showTextBtn");
@@ -67,6 +60,11 @@
       const randomIndex = Math.floor(Math.random() * texts.length);
       const randomText = texts[randomIndex];
       textDisplay.textContent = randomText;
+    });
+
+    // 右クリックを無効化する
+    document.addEventListener("contextmenu", function(e) {
+      e.preventDefault();
     });
   </script>
 </body>
